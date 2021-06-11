@@ -29,6 +29,7 @@ out/
 target/
 .idea/
 .idea_modules/
+*.idea/
 *.iml
 *.ipr
 *.iws
