@@ -7,14 +7,16 @@
 <body>
   <center/>
   <h1>Person</h1>
-  <p th:text="${person.getName()}">VALUE</p>
-  <p th:text="${person.getId()}">VALUE</p>
+  <h3 th:text="${person.getName() + ',  ' + person.getAge() + ' years old.'}">VALUE</h3>
+  <p th:text="${'ID: ' + person.getId()}">VALUE</p>
+  <p th:text="${'Email: ' + person.getEmail()}">VALUE</p>
   <a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>
-
   <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
       <input type="submit" value="Delete"/>
   </form>
+
   <br/>
+  <hr/>
   <a href="/people">Back to all people</a>
 </body>
 </html>
